@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script>
+
+    let n = Math.floor(Math.random() * 1000);
+    console.log(n)
+    let max_n = 3; 
+
+    for (let i=0; i < max_n; i++) {
+     	
+     	let m = +prompt(`У Вас ${3-i} ед. попыток`);
+     	
+     	if (isNaN(m)) {
+          	alert("Неверный ввод");
+        } else if (m === n) {
+          	alert("Верно!");
+          	break;
+        } else if (m > n) {
+          	alert("Ваше число больше");
+        } else if (m < n) {
+          	alert("Ваше число меньше");
+        } else {
+          	alert("Что-то пошло не так");
+        }
+
+        if (i === max_n - 1) {
+        	alert("У Вас кончились попытки(");
+        }
+    }
+    
+   </script>
+</head>
+<body>
+	<p>Loading, please wait...</p>
+</body>
+</html>
